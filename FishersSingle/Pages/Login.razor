@@ -1,0 +1,34 @@
+﻿@page "/login"
+
+<h3 style="text-align: center; font-size: 25px; font-weight: bold; padding-bottom: 30px">Login</h3>
+
+<div class="flex-column" style="display: flex; justify-content: center; align-items: center;">
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 25%">Username:</label>
+		<p style="padding-bottom: 10px">
+		<input type="text" style="width: 400px" placeholder="Username..." @bind-value="inputUser" />
+		</p>
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 25%">Password:</label>
+		<p style="padding-bottom: 30px">
+		<input type="password" style="width: 400px" placeholder="Password..." @bind-value="inputPass" />
+		</p>
+
+	<button @onclick="submitMethod">Login</button>
+
+</div>
+
+@code {
+
+	private string inputUser;
+	private string submitUser;
+
+	private string inputPass;
+	private string submitPass;
+
+	private void submitMethod()
+	{
+		submitUser = inputUser;
+		submitPass = inputPass;
+	}
+}

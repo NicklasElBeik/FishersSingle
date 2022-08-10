@@ -1,0 +1,60 @@
+﻿@page "/create"
+
+<h3 style="text-align: center; font-size: 25px; font-weight: bold; padding-bottom: 30px">Create Account</h3>
+
+<div class="flex-column" style="display: flex; justify-content: center; align-items: center;">
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 27.5%">E-mail:</label>
+		<p style="padding-bottom: 10px">
+		<input type="text" style="width: 400px" placeholder="E-mail..." @bind-value="inputEmail" />
+		</p>
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 17.5%">Choose a username:</label>
+		<p style="padding-bottom: 10px">
+		<input type="text" style="width: 400px" placeholder="Username..." @bind-value="inputUser" />
+		</p>
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 17.5%">Choose a password:</label>
+		<p style="padding-bottom: 10px">
+		<input type="password" style="width: 400px" placeholder="Password..." @bind-value="inputPass" />
+		</p>
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 24%">First Name:</label>
+		<p style="padding-bottom: 10px">
+		<input type="text" style="width: 400px" placeholder="First Name..." @bind-value="inputFirstname" />
+		</p>
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 24%">Last Name:</label>
+		<p style="padding-bottom: 10px">
+		<input type="text" style="width: 400px" placeholder="Last Name..." @bind-value="inputLastname" />
+		</p>
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 18.5%">Enter your birthday:</label>
+		<p style="padding-bottom: 10px">
+		<input type="date" style="width: 400px" @bind-value="inputDate" />
+		</p>
+
+		<label style="font-size: 20px; padding-bottom: 10px; margin-right: 14%">Which city are you from?:</label>
+		<p style="padding-bottom: 30px">
+		<input type="text" style="width: 400px" placeholder="City..." @bind-value="inputCity" />
+		</p>
+
+	<button style="margin-bottom: 50px" @onclick="createAccount">Create Account</button>
+
+</div>
+
+@code {
+
+	private string inputEmail { get; set; }
+	private string inputUser { get; set; }
+	private string inputPass { get; set; }
+	private string inputFirstname  { get; set; }
+	private string inputLastname  { get; set; }
+	private DateTime inputDate { get; set; }
+	private string inputCity { get; set; }
+
+	private void createAccount() {
+
+	}
+
+}
